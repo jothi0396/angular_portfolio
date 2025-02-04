@@ -1,0 +1,168 @@
+<a id="moveup-page"> </a>
+<header class="text-gray-600 body-font bg-indigo-500">
+  <div
+    class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+  >
+    <a
+      class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+        viewBox="0 0 24 24"
+      ></svg>
+      <span class="ml-3 text-xl text-white">Jothi's Portfolio</span>
+    </a>
+    <nav
+      class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+    >
+      <a
+        class="mr-5 hover:text-green-200 text-white"
+        (click)="Projects()"
+        href="#projects"
+        >Projects</a
+      >
+      <a
+        class="mr-5 hover:text-green-200 text-white"
+        (click)="Education()"
+        href="#education"
+        >Education</a
+      >
+
+      <a
+        class="mr-5 hover:text-green-200 text-white"
+        (click)="ExpandAll()"
+        href="#moveup-page"
+        >Expand All</a
+      >
+      <a
+        class="mr-5 hover:text-green-200 text-white"
+        (click)="CollapseAll()"
+        href="#moveup-page"
+        >Collapse All</a
+      >
+      <a
+        class="mr-5 hover:text-green-200 text-white"
+        href="assets/files/Jothimani_Marimuthu-20240618.pdf"
+        target="_blank"
+        download="Jothimani_Marimuthu-20240618.pdf"
+      >
+        Download Resume</a
+      >
+      <a class="mr-5 hover:text-green-200 text-white" href="#contacts"
+        >Contacts</a
+      >
+    </nav>
+  </div>
+</header>
+<section class="flex">
+  <div class="w-3/5 ml-20 mt-20 mr-10 flex flex-wrap">
+    <div>
+      <p
+        class="text-gray-900 text-center ml-100 text-3xl title-font font-medium"
+      >
+        Hi, I'm Jothimani,
+      </p>
+
+      <p class="leading-relaxed mt-10">
+        A passionate Frontend Developer with over 3 years of experience in the
+        IT industry.
+        <b>With 2 years of dedicated experience in frontend development,</b> I
+        specialize in building scalable, user-friendly applications and websites
+        that meet business and user needs. I am committed to writing clean,
+        efficient, and maintainable code while ensuring cross-browser
+        compatibility and seamless performance.
+      </p>
+    </div>
+  </div>
+  <img
+    class="h-64 mr-20 mt-20 rounded"
+    alt="Jothimani"
+    src="assets/images/jothi_img.jpg"
+  />
+</section>
+<section>
+  <a id="projects"> </a>
+  <div [ngClass]="{ block: projectsActive, hidden: !projectsActive }">
+    <app-projects></app-projects>
+  </div>
+  <a id="education"> </a>
+  <div [ngClass]="{ block: educationActive, hidden: !educationActive }">
+    <app-education></app-education>
+  </div>
+</section>
+<footer class="text-gray-600 body-font bg-indigo-500 mt-10">
+  <div
+    class="container px-5 py-3 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
+  >
+    <div
+      class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:mt-0 mt-0 md:text-left text-center order-first"
+    >
+      <div class="lg:w-1/4 md:w-1/2 w-full px-6 m-4">
+        <h2
+          class="title-font font-medium text-white tracking-widest text-sm mb-3"
+        >
+          Email
+        </h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-cyan-400 hover:text-white"
+              >jothimarimuthu0717&#64;gmail.com</a
+            >
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-6 m-4">
+        <h2
+          class="title-font font-medium text-white tracking-widest text-sm mb-3"
+        >
+          Phone
+        </h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-cyan-400 hover:text-white">240-549-4628</a>
+          </li>
+        </nav>
+      </div>
+
+      <div class="lg:w-1/4 md:w-1/2 w-full px-6 m-4">
+        <h2
+          class="title-font font-medium text-white tracking-widest text-sm mb-3"
+        >
+          Links
+        </h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a
+              href="https://github.com/jothi0396"
+              class="text-cyan-400 hover:text-white"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <a id="contacts"> </a>
+        <h2
+          class="title-font font-medium text-white hover:text-cyan-400 tracking-widest text-sm mb-3"
+        >
+          <a href="#moveup-page">
+            <img
+              class="w-32 rounded"
+              src="assets/images/BackToTop.png"
+              alt="Back to top"
+            />
+          </a>
+        </h2>
+      </div>
+    </div>
+  </div>
+</footer>
